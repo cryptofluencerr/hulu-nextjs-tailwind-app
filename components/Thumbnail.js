@@ -1,7 +1,7 @@
-import React from "react";
+/* eslint-disable react/display-name */
+import React, { forwardRef } from "react";
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
-import { forwardRef } from "react";
 
 const Thumbnail = forwardRef(({ result }, ref) => {
   const BASE_URL = "https://image.tmdb.org/t/p/original/";
@@ -14,6 +14,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
     >
       <Image
         src={`${BASE_URL}${result.backdrop_path || result.poster_path}`}
+        alt={result.original_title || result.original_name}
         width={1920}
         height={1080}
         layout="responsive"
@@ -37,5 +38,3 @@ const Thumbnail = forwardRef(({ result }, ref) => {
     </div>
   );
 });
-
-export default Thumbnail;
