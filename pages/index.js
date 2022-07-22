@@ -6,7 +6,7 @@ import requests from "../utils/requests";
 
 export default function Home({ results }) {
   return (
-    <div className="align-center justify-center ml-4 pl-4 xs:ml-0 xs:pl-0">
+    <div className="align-center justify-center ml-6 pl-6 xs:ml-0 xs:pl-0">
       <Head>
         <title>hulu</title>
         <meta name="hulu" content="hulu_app" />
