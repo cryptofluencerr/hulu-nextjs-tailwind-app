@@ -5,20 +5,17 @@ import Results from "../components/Results";
 import requests from "../utils/requests";
 
 export default function Home({ results }) {
-  // console.log(props);
   return (
-    <div>
+    <div className="align-center justify-center ml-4 pl-4 xs:ml-0 xs:pl-0">
       <Head>
         <title>hulu</title>
         <meta name="hulu" content="hulu_app" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Header />
-        <Nav />
-        <Results results={results} />
-      </main>
+      <Header />
+      <Nav />
+      <Results results={results} />
     </div>
   );
 }
