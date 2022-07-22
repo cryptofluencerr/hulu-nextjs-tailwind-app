@@ -14,7 +14,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
     >
       <Image
         src={`${BASE_URL}${result.backdrop_path || result.poster_path}`}
-        alt={result.original_title || result.original_name}
+        alt={result.original_name || result.original_title}
         width={1920}
         height={1080}
         layout="responsive"
@@ -38,3 +38,5 @@ const Thumbnail = forwardRef(({ result }, ref) => {
     </div>
   );
 });
+
+export default Thumbnail;
